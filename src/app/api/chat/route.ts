@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { DEVKIT_KNOWLEDGE } from '../../constants/knowledge';
+import { RUBENIUS_KNOWLEDGE } from '../../constants/knowledge';
 
 const GEMINI_MODEL = 'gemini-2.0-flash';
 const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta';
@@ -11,7 +11,7 @@ You have access to the full DevKit Market knowledge base below. Use it to answer
 Keep answers concise (2–4 sentences). Give direct, developer-friendly answers — no fluff, no upselling.
 
 KNOWLEDGE BASE:
-${JSON.stringify(DEVKIT_KNOWLEDGE, null, 2)}`;
+${JSON.stringify(RUBENIUS_KNOWLEDGE, null, 2)}`;
 
 interface ChatMessage {
   role: 'user' | 'assistant';
