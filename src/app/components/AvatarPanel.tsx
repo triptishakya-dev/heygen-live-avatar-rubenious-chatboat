@@ -151,7 +151,7 @@ export default function AvatarPanel({
   }, [isMicActive]);
 
   return (
-    <section className="relative flex flex-col items-center justify-center overflow-hidden bg-bg-primary p-6 transition-all duration-700">
+    <section className="relative flex flex-col items-center justify-center w-full h-full overflow-hidden bg-bg-primary p-6 transition-all duration-700">
 
       {/* Ambient glow behind video when live */}
       {isActive && (
@@ -162,7 +162,7 @@ export default function AvatarPanel({
 
       {/* Video card */}
       <div
-        className={`relative w-full max-w-[480px] aspect-3/4 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500
+        className={`relative w-full max-w-[480px] flex-1 min-h-0 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500
           ${isActive
             ? 'border border-accent/25 shadow-[0_8px_40px_rgba(0,0,0,0.5),0_0_60px_rgba(99,102,241,0.12)]'
             : 'border border-border-subtle shadow-[0_4px_24px_rgba(0,0,0,0.3)]'
