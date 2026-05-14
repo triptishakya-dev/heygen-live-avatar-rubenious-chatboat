@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { ThemeToggle } from './ThemeToggle';
 
 interface HeaderProps {
@@ -22,13 +23,23 @@ export default function Header({ status, timer }: HeaderProps) {
       {/* Brand */}
       <div className="flex items-center gap-3">
         <div className="relative shrink-0">
-          <div className="w-8 h-8 rounded-xl bg-linear-to-br from-accent to-[#818cf8] flex items-center justify-center text-[11px] font-bold text-white shadow-[0_0_18px_rgba(99,102,241,0.35)]">
-            RU
-          </div>
+          <Image
+            src="/flipkart-logo-39903.png"
+            alt="Flipkart"
+            width={32}
+            height={32}
+            className="rounded-xl"
+          />
         </div>
+
         <div className="leading-none">
-          <div className="text-[14px] font-semibold text-text-primary tracking-tight">Rubenius</div>
-          <div className="hidden sm:block text-[11px] text-text-muted mt-0.5">AI Video Agent</div>
+          <div className="text-[14px] font-semibold text-text-primary tracking-tight">
+            Flipkart
+          </div>
+
+          <div className="hidden sm:block text-[11px] text-text-muted mt-0.5">
+            Ziva AI Assistant
+          </div>
         </div>
       </div>
 
@@ -37,7 +48,9 @@ export default function Header({ status, timer }: HeaderProps) {
         <ThemeToggle />
 
         {/* Status pill */}
-        <div className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-[11px] font-medium border transition-all duration-300 ${cfg.pill}`}>
+        <div
+          className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-[11px] font-medium border transition-all duration-300 ${cfg.pill}`}
+        >
           <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${cfg.dot}`} />
           {cfg.label}
         </div>
