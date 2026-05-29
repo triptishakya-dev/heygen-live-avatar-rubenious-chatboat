@@ -1,17 +1,17 @@
 import { NextResponse } from 'next/server';
-import { FLIPKART_KNOWLEDGE } from '../../constants/knowledge';
+import { RUBENIUS_KNOWLEDGE } from '../../constants/knowledge';
 
 const GEMINI_MODEL = 'gemini-2.0-flash';
 const GEMINI_API_BASE = 'https://generativelanguage.googleapis.com/v1beta';
 
-const SYSTEM_PROMPT = `You are Rubenius, an AI assistant for DevKit Market — a marketplace for production-ready starter kits and developer tools built by Nikhil Anand.
+const SYSTEM_PROMPT = `You are Rubenius AI, an interactive digital human assistant for Rubenius — a leading experiential design, workplace strategy, and immersive environment company.
 
-You have access to the full DevKit Market knowledge base below. Use it to answer questions accurately. When a user asks about products, pricing, or the creator, refer to this data.
+You have access to the full Rubenius knowledge base below. Use it to answer questions accurately and helpfully. When users ask about Rubenius services, experience centers, branded workspaces, design methodologies, or contact information, refer to this knowledge base.
 
-Keep answers concise (2–4 sentences). Give direct, developer-friendly answers — no fluff, no upselling.
+Keep answers concise (2–4 sentences). Give direct, professional, and friendly answers.
 
 KNOWLEDGE BASE:
-${JSON.stringify(FLIPKART_KNOWLEDGE, null, 2)}`;
+${JSON.stringify(RUBENIUS_KNOWLEDGE, null, 2)}`;
 
 interface ChatMessage {
   role: 'user' | 'assistant';
